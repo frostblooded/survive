@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://ldhjbblypwvh"]
+
+[ext_resource type="PackedScene" uid="uid://do1bpy1s7robk" path="res://scenes/player.tscn" id="1_el5xt"]
+
+[sub_resource type="Gradient" id="Gradient_nvsdw"]
+colors = PackedColorArray(0.125384, 0.378318, 0.153354, 1, 0.13039, 0.306312, 0.425406, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_5780h"]
+gradient = SubResource("Gradient_nvsdw")
+width = 1500
+height = 1500
+
+[node name="Main" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(1.28, 0.72)
+texture = SubResource("GradientTexture2D_5780h")
+
+[node name="Player" parent="." instance=ExtResource("1_el5xt")]
+position = Vector2(960, 584)
